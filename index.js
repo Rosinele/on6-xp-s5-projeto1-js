@@ -21,8 +21,6 @@ const calcularMedia = function calcularMedia(nota1, nota2, nota3) {
 
 
 
-
-
 console.log('-----------------------------------------------------')
 // ----------------------------------------------
 console.log('Callback')
@@ -195,13 +193,13 @@ console.log(dataLonga)
 
 
 
-console.log('-----------------------------------------------------')
+console.log('-----------------------------testestets------------------------')
 // ----------------------------------------------
 
 const pessoa = {
   nome: 'Yasminn',
   sobrenome: 'Vaz',
-  idade: 1,
+  idade: 25,
   altura: 1.62,
   peso: 55,
   andando: false,
@@ -215,7 +213,6 @@ const pessoa = {
   apresentacao: () => {
 
     const anos = (pessoa.idade === 1) ? 'ano' : 'anos'
-  
     const metros = (pessoa.caminhouQuantosMetros <= 1) ?  'metro' : 'metros'
   
     return `Olá, eu sou ${pessoa.nome} ${pessoa.sobrenome}, tenho ${pessoa.idade} ${anos}, ${pessoa.altura}, meu peso é ${pessoa.peso} e, só hoje, eu já caminhei ${pessoa.caminhouQuantosMetros} ${metros}!`
@@ -223,7 +220,7 @@ const pessoa = {
 }
 
 console.log(pessoa)
-pessoa.andar(200)
+pessoa.andar(100)
 console.log(pessoa.apresentacao())
 
 // pessoa.fazerAniversario = function () {
@@ -278,23 +275,39 @@ console.log(pessoa.apresentacao())
 
 // Quero criar as variáveis pessoa2 e pessoa3 com as mesmas propriedades, mas alterando os valores de nome, sobrenome, altura e peso
 
+const pessoa2 = {
+  nome: 'Rose',
+  sobrenome: 'Félix',
+  idade: 23,
+  altura: 1.65,
+  peso: 67,
+  andando: false,
+  caminhouQuantosMetros: 0,
+  fazerAniversario: () => this.idade++,
+  andar: (metrosCaminhados) => {
+    this.andando = true
+    this.caminhouQuantosMetros += metrosCaminhados
+  },
+  parar: () => this.andando = false,
+  apresentacao: () => {
 
+    const anos = (this.idade === 1) ? 'ano' : 'anos'
+    const metros = (this.caminhouQuantosMetros <= 1) ?  'metro' : 'metros'
+  
+    return `Olá, eu sou ${this.nome} ${this.sobrenome}, tenho ${this.idade} ${anos}, ${this.altura}, meu peso é ${this.peso} e, só hoje, eu já caminhei ${this.caminhouQuantosMetros} ${metros}!`
+  }
+}
 
+console.log(pessoa2)
 
-
+console.log(pessoa2.apresentacao())
 
 console.log('-----------------------------------------------------')
 // ----------------------------------------------
 // CLASSES
 console.log('Classes 🆕')
 
-// Vamos criar a classe Pessoa
-
-
-
-
-
-
+// Vamos criar a classe pessoa
 
 console.log('-----------------------------------------------------')
 // ----------------------------------------------
